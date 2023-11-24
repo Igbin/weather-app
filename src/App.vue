@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HomePage />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import HomePage from './pages/HomePage.vue';
+import { useGlobalStore } from '@/store';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const store = useGlobalStore();
+
+store.detectCity();
 </script>
 
-<style>
+<style lang="scss">
+
+body {
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+  background: #4fade1;
+  padding: 10px;
 }
 </style>

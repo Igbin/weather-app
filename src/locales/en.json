@@ -1,0 +1,41 @@
+{
+  "languages": {
+    "ua": "Ukraine",
+    "en": "English"
+  },
+  "base": {
+    "yes": "Yes",
+    "no": "No",
+    "warning": "Warning",
+    "cancel": "Cancel",
+    "toFav": "To favorites",
+    "fromFav": "Out of favorites"
+  },
+  "navigation": {
+    "main": "Main",
+    "favorites": "Favorites",
+    "today": "Today",
+    "week": "Week",
+    "day": "Day",
+    "night": "Night"
+  },
+  "chart": {
+    "dayTitle": "Hourly forecast for rest of today",
+    "weekTitle": "Daily average forecast for week"
+  },
+  "autocomplete": {
+    "placeholder": "Start typing city name"
+  },
+  "weather": {
+    "feels" : "Feels like",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "wind": "Wind speed",
+    "speed": "meters/seconds",
+    "speedMobile": "m/s"
+  },
+  "modal": {
+    "confirmMessage": "Are you sure you want delete this block !?",
+    "warningMessage": "You must delete at least one of favorite cities because maximum 5 favorites!"
+  }
+}

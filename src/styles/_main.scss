@@ -1,0 +1,26 @@
+@mixin tab-list {
+  display: flex;
+  margin: 0;
+  padding: 15px 0 0 0;
+  border-bottom: 1px solid #dbdbdb;
+  list-style: none;
+  justify-content: center;
+  font-weight: lighter;
+
+  .tab-button {
+    background: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+
+    &.active {
+      border-bottom: 2px solid #4fade1;
+      color: #4fade1;
+      font-weight: bold;
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+}

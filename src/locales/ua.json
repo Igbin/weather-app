@@ -1,0 +1,41 @@
+{
+  "languages": {
+    "en": "English",
+    "us": "Ukraine"
+  },
+  "base": {
+    "yes": "Так",
+    "no": "Ні",
+    "warning": "Увага",
+    "cancel": "Відміна",
+    "toFav": "В обране",
+    "fromFav": "З обранного"
+  },
+  "navigation": {
+    "main": "Головні",
+    "favorites": "Обране",
+    "today": "Сьогодні",
+    "week": "Тиждень",
+    "day": "День",
+    "night": "Ніч"
+  },
+  "chart": {
+    "dayTitle": "Погодинний прогноз на решту дня",
+    "weekTitle": "Середній прогноз на тиждень"
+  },
+  "autocomplete": {
+    "placeholder": "Вводіть назву міста"
+  },
+  "weather": {
+    "feels" : "Відчувається",
+    "sunrise": "Світанок",
+    "sunset": "Захід",
+    "wind": "Швидкість вітру",
+    "speed": "метрів/секунду",
+    "speedMobile": "м/с"
+  },
+  "modal": {
+    "confirmMessage": "Ви точно хотіли видалити цей блок !?",
+    "warningMessage": "Для додавання видаліть якесь місто тому що максимум 5 обраних!"
+  }
+}
