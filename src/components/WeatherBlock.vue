@@ -133,7 +133,9 @@ const getData = async (coords, lang) => {
   currentCity.longitude = currentPosition?.coords?.longitude || store.currentCityCoords.long;
 
   isLoading.value = true;
-  getApiWeatherData(currentCity.latitude, currentCity.longitude, lang || locale.value)
+  if (!currentCity.name) await store.detectCity();
+
+  getApiWeatherData(currentCity.latitude || store.currentCityCoords.lat, currentCity.longitude || store.currentCityCoords.long, lang || locale.value)
     .then(response => response.json())
     .then(data => weatherData.value = data)
     .then(() => calculateAverageForecastData())

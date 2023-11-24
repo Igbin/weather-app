@@ -9,7 +9,7 @@ export const useGlobalStore = defineStore('global', () => {
   });
 
   const detectCity = () => {
-    fetch(`https://api.ipdata.co?api-key=${process.env.VUE_APP_IP_DATA_API_KEY}`)
+    return fetch(`https://api.ipdata.co?api-key=${process.env.VUE_APP_IP_DATA_API_KEY}`)
       .then(res => res.json())
       .then(data => {
         currentCityName.value = data.city;

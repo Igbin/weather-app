@@ -4,11 +4,6 @@
 
 <script setup>
 import HomePage from './pages/HomePage.vue';
-import { useGlobalStore } from '@/store';
-
-const store = useGlobalStore();
-
-store.detectCity();
 </script>
 
 <style lang="scss">
