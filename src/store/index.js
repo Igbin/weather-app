@@ -1,14 +1,22 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 
 export const useGlobalStore = defineStore('global', () => {
-  const currentCity = ref('');
+  const currentCityName = ref('');
+  const currentCityCoords = reactive({
+    lat: '',
+    long: ''
+  });
 
   const detectCity = () => {
     fetch(`https://api.ipdata.co?api-key=${process.env.VUE_APP_IP_DATA_API_KEY}`)
       .then(res => res.json())
-      .then(data => currentCity.value = data.city);
+      .then(data => {
+        currentCityName.value = data.city;
+        currentCityCoords.lat = data.latitude;
+        currentCityCoords.long = data.longitude;
+      });
     }
 
-  return { detectCity, currentCity };
+  return { detectCity, currentCityName, currentCityCoords };
 });

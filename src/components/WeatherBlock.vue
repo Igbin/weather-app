@@ -115,8 +115,8 @@ onMounted(async () => {
   updateWidgetIntervalId = setInterval(getData, 600000);
 });
 
-watch(() => store.currentCity, () => {
-  currentCity.name = store.currentCity;
+watch(() => store.currentCityName, () => {
+  currentCity.name = store.currentCityName;
 }, { immediate: true });
 
 const getData = async (coords, lang) => {
@@ -129,8 +129,8 @@ const getData = async (coords, lang) => {
     currentPosition = coords;
   }
 
-  currentCity.latitude = currentPosition.coords?.latitude;
-  currentCity.longitude = currentPosition.coords?.longitude;
+  currentCity.latitude = currentPosition?.coords?.latitude || store.currentCityCoords.lat;
+  currentCity.longitude = currentPosition?.coords?.longitude || store.currentCityCoords.long;
 
   isLoading.value = true;
   getApiWeatherData(currentPosition.coords?.latitude, currentPosition.coords?.longitude, lang || locale.value)
