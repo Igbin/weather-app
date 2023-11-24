@@ -73,7 +73,7 @@ const imageUrl = computed(() => {
       position: absolute;
 
       &::after {
-        content: url("@/assets/icon/star.svg");
+        content: url("../assets/icon/star.svg");
         font-size: 10px;
         vertical-align: super;
         background-repeat: no-repeat;
