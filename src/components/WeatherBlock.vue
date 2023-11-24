@@ -105,7 +105,7 @@ const isInFavorites = computed(() => {
 });
 
 onMounted(async () => {
-  currentCity.name = props.data?.name || store.currentCity;
+  currentCity.name = props.data?.name || store.currentCityName;
 
   getData(
     props.data.latitude && props.data.longitude ?
